@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BBOL BBOL BBOL</title>
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- 어두운 배경 -->
+  <div class="overlay"></div>
+
+  <header>
+    <div class="header-container">
+      <div class="logo" data-ko="BBOL BBOL BBOL" data-en="BBOL BBOL BBOL">BBOL BBOL BBOL</div>
+      <nav>
+        <ul>
+          <li><a href="#" data-ko="홈" data-en="Home">홈</a></li>
+          <li><a href="#" data-ko="커뮤니티" data-en="Community">커뮤니티</a></li>
+          <li><a href="#" data-ko="여행지" data-en="RecoSpot">여행지</a></li>
+          <li><a href="#" data-ko="여행뽈뽈" data-en="BBOL BBOL BBOL">여행뽈뽈</a></li>
+          <button class="search-btn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <button class="user-btn">
+            <i class="fa-solid fa-user"></i>
+          </button>
+          <button class="earth-btn">
+            <i class="fa-solid fa-earth-americas"></i>
+          </button>
+          <button class="korean" id="lang-btn" data-lang="ko">English</button>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 검색 바 -->
+  <div class="search-bar-container">
+    <div class="search-bar-content">
+      <input type="text" placeholder="도시나 키워드를 검색해보세요..." data-ko="도시나 키워드를 검색해보세요..."
+        data-en="Search cities or keywords...">
+      <button class="close-btn"><i class="fa-solid fa-times"></i></button>
+    </div>
+  </div>
+
+  <script src="../components/header.js"></script>
+  <script src="../components/lang-toggle.js"></script>
+</body>
+
+</html>

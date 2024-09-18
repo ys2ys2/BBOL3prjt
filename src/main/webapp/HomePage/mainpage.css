@@ -1,0 +1,377 @@
+@font-face {
+  font-family: 'NanumSquareRoundB';
+  src: url('../fonts/NanumSquareRoundB.ttf') format('truetype'),
+       url('../fonts/NanumSquareRoundOTFB.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NanumSquareRoundEB';
+  src: url('../fonts/NanumSquareRoundEB.ttf') format('truetype'),
+       url('../fonts/NanumSquareRoundOTFEB.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NanumSquareRoundR';
+  src: url('../fonts/NanumSquareRoundR.ttf') format('truetype'),
+       url('../fonts/NanumSquareRoundOTFR.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NanumSquareRoundL';
+  src: url('../fonts/NanumSquareRoundL.ttf') format('truetype'),
+       url('../fonts/NanumSquareRoundOTFL.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NanumSquareRoundOTFR';
+  src: url('../fonts/NanumSquareRoundOTFR.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NanumSquareRoundOTFB';
+  src: url('../fonts/NanumSquareRoundOTFB.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NanumSquareRoundOTFEB';
+  src: url('../fonts/NanumSquareRoundOTFEB.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NanumSquareRoundOTFL';
+  src: url('../fonts/NanumSquareRoundOTFL.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+/* 바깥 배너 컨테이너: 고정된 크기와 위치 설정 */
+body {
+  background-color: #F2F2F2;
+  align-items: center;
+  font-family: 'NanumSquareRoundR', sans-serif;
+  width: 100%; /* 전체 화면의 90% 너비 */
+  margin: 0 auto; /* 가로 방향으로 가운데 정렬 */
+}
+
+/* 메인 컨테이너 */
+/* 전체 컨테이너 설정 */
+.main-container {
+  width: 100%;
+  max-width: 100%;
+  margin-top: 10px;
+  background-color: #f2f2f2;
+}
+
+.main-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* 메인 배너 슬라이드 */
+.swiper-container {
+  display: flex; /* 가로 배치를 위해 flex 사용 */
+  justify-content: space-between; /* 두 섹션 사이에 여백을 두기 위해 */
+  align-items: center; /* 세로 가운데 정렬 */
+  width: 100%;
+  height: 450px;
+  position: relative;
+  margin-bottom: 50px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  box-sizing: border-box;
+  gap: 20%; /* 설명 박스와 슬라이더 사이에 여백 추가 */
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-slide {
+  width: 80%;
+}
+
+.swiper-slide:nth-child(2n) {
+  width: 60%;
+}
+
+.swiper-slide:nth-child(3n) {
+  width: 40%;
+}
+
+/* pagination 스타일 */
+.swiper-pagination {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  opacity: 0.5;
+  margin: 0 5px;
+  border-radius: 50%;
+  transition: opacity 0.3s;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+/* 페이지네이션과 컨트롤러 박스 스타일 */
+.custom-pagination {
+  display: flex;
+  align-items: center;
+  margin-top: 25%;
+  font-size: 16px;
+  gap: 20px;
+  position: relative;
+}
+
+.current-slide {
+  margin-left: 15px;
+}
+
+.custom-pagination .controls {
+  display: flex;
+  gap: 10px;
+}
+
+/* 왼쪽 버튼: 이미지의 왼쪽 절반만 표시 */
+
+
+.custom-pagination .controls button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.custom-pagination .controls button:hover {
+  color: #276BF2;
+}
+
+/* 설명 박스 스타일 */
+.description-box {
+  width: 40%;
+  padding: 20px;
+  background-color: #f2f2f2;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 10%;
+}
+
+.description-box h2 {
+  font-size: 15px;
+  color: #333;
+}
+
+.description-box p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.description-box .detail-link {
+  font-size: 16px;
+  color: #000;
+  text-decoration: none;
+}
+
+/* 인기 여행지 스타일 */
+.HotPlace {
+  background-color: #f2f2f2;
+}
+
+.HotPlace h2 {
+  margin-left: 20px;
+}
+
+
+.HotPlace-list {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto; /* 가로 스크롤 가능하게 설정 */
+
+}
+
+.HotPlace-item {
+  flex: 1;
+  text-align: center;
+  max-width: 200px; /* 각 아이템의 최대 너비 */
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+/* 이미지 대신 사용할 플레이스홀더 */
+.HotPlace .image-placeholder {
+  width: 100%;
+  height: 200px; /* 고정된 높이 */
+  background-color: #94B8FF; /* 이미지가 없는 동안의 배경 색상 */
+  border-radius: 10px; /* 테두리 둥글게 */
+}
+
+.HotPlace-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.HotPlace-item p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* 인기 커뮤니티 스타일 */
+.Community {
+  margin-bottom: 50px;
+  background-color: #F2F2F2;
+}
+
+.Community .image-placeholder {
+  width: 100%;
+  height: 500px; /* 고정된 높이 */
+  background-color: #FFB85A; /* 이미지가 없는 동안의 배경 색상 */
+  border-radius: 10px; /* 테두리 둥글게 */
+}
+
+.Community h2 {
+  margin-left: 20px;
+}
+
+.HotPlace-community h2 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.community-list {
+  display: flex;
+  gap: 20px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.community-item {
+  flex: 1;
+  text-align: center;
+  max-width: 200px; /* 각 아이템의 최대 너비 */
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.community-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.community-item p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+
+.ad-section {
+  margin-bottom: 50px;
+  background-color: #F2F2F2;
+}
+
+.ad-section h2 {
+  margin-left: 20px;
+}
+
+
+.ad-banner {
+  background-color: #A7F25C;
+  width: 85%;
+  height: 250px;
+  margin: 0 auto; /* 마진 0, auto로 가운데 정렬(좌우여백 자동 설정) */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+
+/* 이벤트 섹션 스타일 */
+.event-section {
+  margin-bottom: 50px;
+  background-color: #f2f2f2;
+}
+
+.event-section h2 {
+  margin-left: 20px;
+}
+
+.event-list {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto; /* 가로 스크롤 가능하게 설정 */
+  padding: 20px;
+  justify-content: space-between;
+
+}
+
+/* 이미지 대신 사용할 플레이스홀더 */
+.event-list .image-placeholder {
+  width: 400px;
+  height: 200px; /* 고정된 높이 */
+  background-color: #04BF20; /* 이미지가 없는 동안의 배경 색상 */
+  border-radius: 10px; /* 테두리 둥글게 */
+}
+
+/* 텍스트 스타일 */
+.event-item p {
+  text-align: center;
+  font-size: 18px;
+}
+
+/* 푸터 스타일 */
+.footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #333;
+  color: white;
+}
+

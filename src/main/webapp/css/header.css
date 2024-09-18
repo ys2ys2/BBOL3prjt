@@ -1,0 +1,244 @@
+@font-face {
+  font-family: 'NanumSquareRoundB';
+  src: url('../fonts/NanumSquareRoundB.ttf') format('truetype'),
+       url('../fonts/NanumSquareRoundOTFB.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NanumSquareRoundEB';
+  src: url('../fonts/NanumSquareRoundEB.ttf') format('truetype'),
+       url('../fonts/NanumSquareRoundOTFEB.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NanumSquareRoundR';
+  src: url('../fonts/NanumSquareRoundR.ttf') format('truetype'),
+       url('../fonts/NanumSquareRoundOTFR.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NanumSquareRoundL';
+  src: url('../fonts/NanumSquareRoundL.ttf') format('truetype'),
+       url('../fonts/NanumSquareRoundOTFL.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NanumSquareRoundOTFR';
+  src: url('../fonts/NanumSquareRoundOTFR.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NanumSquareRoundOTFB';
+  src: url('../fonts/NanumSquareRoundOTFB.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NanumSquareRoundOTFEB';
+  src: url('../fonts/NanumSquareRoundOTFEB.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NanumSquareRoundOTFL';
+  src: url('../fonts/NanumSquareRoundOTFL.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+/* 전체적인 헤더 스타일 */
+header {
+    background-color: #a4ed44; /* 밝은 연두색 배경 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'NanumSquareRoundR', sans-serif;
+    height: 80px; /* 헤더 높이를 설정하여 검색 바가 이 아래에서 나오도록 설정 */
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 14px;
+  position: relative;
+  max-width: 1920px;
+  margin: 0 auto;
+  z-index: 120;
+}
+
+/* 로고 스타일 */
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0px black;
+    position: absolute;
+    left: 20px;
+}
+
+/* 네비게이션 스타일 */
+
+nav {
+  flex-grow: 1; /* 가운데로 네비게이션을 밀기 위해 flex-grow 사용 */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap:  100px;
+    justify-content: center;
+    margin-right: 20%;
+}
+
+nav ul li {
+    display: inline;
+    font-size: 16px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.search-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: black;
+  display: flex;
+  align-items: center;
+  position: absolute; /* 우측에 배치 */
+  right: 200px;
+}
+
+.close-btn{
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+}
+
+.close-btn:hover {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+
+.search-btn:hover {
+  color: #666; /* 버튼에 마우스를 올렸을 때 색상 변경 */
+}
+
+.user-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: black;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 120px;
+}
+
+.user-btn:hover {
+  color: #666; /* 버튼에 마우스를 올렸을 때 색상 변경 */
+}
+
+.earth-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: black;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 80px;
+}
+
+.earth-btn:hover {
+  color: #666; /* 버튼에 마우스를 올렸을 때 색상 변경 */
+}
+
+
+.korean {
+  position: absolute;
+  right: 10px;
+  font-size: 15px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* 어두운 배경 */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+    display: none; /* 기본적으로 숨김 */
+}
+
+
+/* 검색 바 컨테이너 스타일 */
+.search-bar-container {
+    position: fixed;
+    top: 180px; /* 헤더 높이만큼 아래에서 시작 (헤더 아래에서 내려옴) */
+    left: 0;
+    width: 100%;
+    background-color: white; 
+    padding: 20px;
+    z-index: 100;
+    opacity: 0;
+    transform: translateY(-100%); /* 처음에는 화면 위에 숨겨짐 */
+    transition: transform 0.5s ease-in-out; /* 부드럽게 내려오는 애니메이션 설정 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar-container.active {
+  opacity: 1;
+  transform: translateY(0); /* active 클래스가 추가되면 검색 바가 내려옴 */
+}
+
+.search-bar-content {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-bar-content input {
+    width: 95%;
+    padding: 10px;
+    font-size: 14px;
+    border-bottom: 2px solid black;
+    border-radius: 30px;
+    background-color: transparent;
+    color: black;
+    font-family: 'NanumSquareRoundR', sans-serif;
+}
+
+.search-bar-content input::placeholder {
+    color: black;
+}
