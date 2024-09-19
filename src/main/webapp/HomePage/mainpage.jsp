@@ -5,7 +5,6 @@
 <%@ page import="java.io.IOException" %>
 <%@ page import="org.json.JSONArray" %>
 
-
 <%
     // 공공데이터 API URL 및 매개변수 설정
     String apiKey = "a471e760-6101-4c50-bb4c-560d6fb00f86";
