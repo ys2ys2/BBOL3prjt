@@ -66,6 +66,7 @@ body {
   font-family: 'NanumSquareRoundR', sans-serif;
   width: 100%; /* 전체 화면의 90% 너비 */
   margin: 0 auto; /* 가로 방향으로 가운데 정렬 */
+  overflow-x: hidden;
 }
 
 /* 메인 컨테이너 */
@@ -89,7 +90,7 @@ body {
   display: flex; /* 가로 배치를 위해 flex 사용 */
   justify-content: space-between; /* 두 섹션 사이에 여백을 두기 위해 */
   align-items: center; /* 세로 가운데 정렬 */
-  width: 100%;
+  width: 110%;
   height: 450px;
   position: relative;
   margin-bottom: 50px;
@@ -100,7 +101,7 @@ body {
 }
 
 .swiper {
-  width: 100%;
+  width: 190%;
   height: 100%;
 }
 
@@ -121,11 +122,11 @@ body {
 }
 
 .swiper-slide {
-  width: 80%;
+  width: 100%;
 }
 
 .swiper-slide:nth-child(2n) {
-  width: 60%;
+  width: 40%;
 }
 
 .swiper-slide:nth-child(3n) {
@@ -192,7 +193,7 @@ body {
 
 /* 설명 박스 스타일 */
 .description-box {
-  width: 40%;
+  width: 85%;
   padding: 20px;
   background-color: #f2f2f2;
   position: relative;
@@ -202,9 +203,21 @@ body {
   margin-left: 10%;
 }
 
+#description-text {
+  white-space: normal; /* 자동 줄바꿈 허용 */
+  overflow: hidden;    /* 넘치는 부분을 숨김 */
+  text-overflow: ellipsis; /* 필요시 ... 표시 */
+  max-height: 100px; /* 최대 높이를 설정하여 너무 길면 잘리게 */
+  display: -webkit-box; /* Flexbox의 변형인 Webkit 설정 */
+  -webkit-line-clamp: 3; /* 최대 3줄로 제한 */
+  -webkit-box-orient: vertical; /* Flexbox 방향 설정 */
+}
+
+
 .description-box h2 {
-  font-size: 15px;
+  font-size: 20px;
   color: #333;
+  width: 100%;
 }
 
 .description-box p {

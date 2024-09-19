@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function updateDescription(index) {
     const description = descriptions[index % descriptions.length];  // 데이터가 순환할 수 있게 처리
     document.getElementById('description-title').textContent = description.title;
-    //document.getElementById('description-text').textContent = description.description;
-    //document.getElementById('detail-link').setAttribute('href', description.link);
+    document.getElementById('description-text').textContent = description.description;  // 내용을 공공데이터 description으로 설정
+    // document.getElementById('detail-link').setAttribute('href', description.link);
   }
 });

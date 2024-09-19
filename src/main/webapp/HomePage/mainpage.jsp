@@ -10,11 +10,14 @@
     // 공공데이터 API URL 및 매개변수 설정
     String apiKey = "a471e760-6101-4c50-bb4c-560d6fb00f86";
     String numOfRows = "7"; // 요청할 레코드 수
+    String pageNo = "2"; // 요청할 페이지 번호
+
 
     // API 요청 URL 빌드
     StringBuilder urlBuilder = new StringBuilder("http://api.kcisa.kr/openapi/API_CNV_061/request");
     urlBuilder.append("?" + URLEncoder.encode("serviceKey", "UTF-8") + "=" + URLEncoder.encode(apiKey, "UTF-8"));
     urlBuilder.append("&" + URLEncoder.encode("numOfRows", "UTF-8") + "=" + URLEncoder.encode(numOfRows, "UTF-8"));
+    urlBuilder.append("&" + URLEncoder.encode("pageNo", "UTF-8") + "=" + URLEncoder.encode(pageNo, "UTF-8"));
 
     // HTTP 연결 설정
     URL url = new URL(urlBuilder.toString());
@@ -151,7 +154,7 @@
         <!-- 설명 박스 -->
         <div class="description-box">
           <h2 id="description-title"></h2>
-          <p id="description-text">웃음도 즐거움도 넉넉하게! 이번 추석에는 최고의 여행지를 찾아보세요.</p>
+          <p id="description-text"></p>
           <a href="#" class="detail-link" id="detail-link">자세히 보기</a>
 
             <!-- 슬라이드 컨트롤 -->
@@ -175,25 +178,25 @@
         <div class="swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <img src="../images/sample1.jpg" alt="배너1">
+              <img src="../images/banner_01.jpg" alt="배너1">
             </div>
             <div class="swiper-slide">
-              <img src="../images/sample2.jpg" alt="배너2">
+              <img src="../images/banner_02.jpg" alt="배너2">
             </div>
             <div class="swiper-slide">
-              <img src="../images/sample3.jpg" alt="배너3">
+              <img src="../images/banner_03.jfif" alt="배너3">
             </div>
             <div class="swiper-slide">
-              <img src="../images/sample4.jpg" alt="배너4">
+              <img src="../images/banner_04.jpg" alt="배너4">
             </div>
             <div class="swiper-slide">
-              <img src="../images/sample5.jpg" alt="배너5">
+              <img src="../images/banner_05.jpg" alt="배너5">
             </div>
             <div class="swiper-slide">
-              <img src="../images/sample6.jpg" alt="배너6">
+              <img src="../images/banner_06.jpg" alt="배너6">
             </div>
             <div class="swiper-slide">
-              <img src="../images/sample7.jpg" alt="배너7">
+              <img src="../images/banner_07.jpg" alt="배너7">
             </div>
           </div>
         </div>
@@ -323,7 +326,6 @@
 
    <!-- 메인 스크립트 -->
    
-   <script src="mainpage.js"></script>
    <script src="../components/header.js"></script>
    <script src="../components/lang-toggle.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
