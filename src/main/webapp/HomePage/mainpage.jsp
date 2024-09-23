@@ -4,6 +4,8 @@
 <%@ page import="java.io.BufferedReader, java.io.InputStreamReader" %>
 <%@ page import="java.io.IOException" %>
 <%@ page import="org.json.JSONArray" %>
+<%@ page import="org.apache.commons.text.StringEscapeUtils" %>
+
 
 
 <%
@@ -63,6 +65,9 @@
         String spatialCoverage = item.split("<spatialCoverage>")[1].split("</spatialCoverage>")[0];
         
 
+        // HTML 엔티티를 디코딩
+        description = StringEscapeUtils.unescapeHtml4(description);
+        
         // 데이터를 Map에 저장
         Map<String, String> itemData = new HashMap<>();
         itemData.put("title", title);
@@ -77,7 +82,7 @@
 
     
     // 데이터를 JSON 형식으로 변환하여 JavaScript로 전달
-     String jsonItemList = new org.json.JSONArray(itemList).toString();
+    String jsonItemList = new org.json.JSONArray(itemList).toString();
 
 %>
 
@@ -101,7 +106,7 @@
     const descriptions = <%= jsonItemList %>;
   </script>
 
-
+ 
 </head>
 
 <body>
