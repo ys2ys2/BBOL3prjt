@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>여행기 작성</title>
+    <link rel="stylesheet" href="../css/travelWrite.css">
+    <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script> <!-- 본문 편집기 -->
+</head>
+<body>
+    <div class="write-container">
+        <h1>여행기 작성하기</h1>
+        <form id="travelWriteForm" action="/submitTravelPost" method="POST">
+            <div class="form-group">
+                <label for="topic">토픽</label>
+                <select id="topic" name="topic" required>
+                    <option value="">토픽을 선택해주세요.</option>
+                    <option value="도시여행">도시여행</option>
+                    <option value="자연여행">자연여행</option>
+                    <option value="해외여행">해외여행</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="title">제목</label>
+                <input type="text" id="title" name="title" placeholder="제목을 입력해주세요." required>
+            </div>
+            <div class="form-group">
+                <label for="tags">태그</label>
+                <input type="text" id="tags" name="tags" placeholder="태그를 입력해주세요. (최대 3개)">
+            </div>
+            <div class="form-group">
+                <label for="content">본문</label>
+                <textarea id="content" name="content" placeholder="내용을 입력해주세요." required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="imageUpload">이미지 업로드</label>
+                <input type="file" id="imageUpload" name="imageUpload" accept="image/*">
+            </div>
+            <button type="submit" class="submit-button">작성 완료</button>
+        </form>
+    </div>
+
+    <script>
+        // CKEditor로 본문 편집기 활성화
+        CKEDITOR.replace('content');
+    </script>
+</body>
+</html>
