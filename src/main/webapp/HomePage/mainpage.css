@@ -177,6 +177,19 @@ body {
   gap: 10px;
 }
 
+.custom-pagination .controls button {
+  width: 40px; /* 버튼의 고정 너비 */
+  height: 40px; /* 버튼의 고정 높이 */
+  display: flex;
+  justify-content: center; /* 이미지가 버튼 안에서 가운데 정렬되도록 설정 */
+  align-items: center;
+  padding: 0;
+  border: none;
+  background: none; /* 버튼의 배경 제거 */
+}
+
+
+
 /* 왼쪽 버튼: 이미지의 왼쪽 절반만 표시 */
 
 
@@ -191,10 +204,12 @@ body {
   color: #276BF2;
 }
 
+
 /* 설명 박스 스타일 */
 .description-box {
-  width: 85%;
-  padding: 20px;
+  width: 80%;
+  max-width: 250px;
+  /* padding: 20px; */
   background-color: #f2f2f2;
   position: relative;
   display: flex;
@@ -232,23 +247,26 @@ body {
 }
 
 /* 인기 여행지 스타일 */
-.HotPlace {
+.famous {
   background-color: #f2f2f2;
 }
 
-.HotPlace h2 {
+.famous h2 {
   margin-left: 20px;
 }
 
 
-.HotPlace-list {
+.famous-list {
   display: flex;
   gap: 20px;
   overflow-x: auto; /* 가로 스크롤 가능하게 설정 */
+  padding: 10px;
+  justify-content: space-evenly;
+
 
 }
 
-.HotPlace-item {
+.famous-item {
   flex: 1;
   text-align: center;
   max-width: 200px; /* 각 아이템의 최대 너비 */
@@ -258,20 +276,20 @@ body {
 }
 
 /* 이미지 대신 사용할 플레이스홀더 */
-.HotPlace .image-placeholder {
+.famous .image-placeholder {
   width: 100%;
   height: 200px; /* 고정된 높이 */
   background-color: #94B8FF; /* 이미지가 없는 동안의 배경 색상 */
   border-radius: 10px; /* 테두리 둥글게 */
 }
 
-.HotPlace-item img {
+.famous-item img {
   width: 100%;
   height: 200px;
   object-fit: cover;
 }
 
-.HotPlace-item p {
+.famous-item p {
   font-size: 18px;
   margin-top: 10px;
 }
@@ -293,7 +311,7 @@ body {
   margin-left: 20px;
 }
 
-.HotPlace-community h2 {
+.famous-community h2 {
   font-size: 36px;
   color: #333;
   margin-bottom: 20px;
@@ -326,24 +344,32 @@ body {
   margin-top: 10px;
 }
 
+.hotplace-list {
+  display: flex;
+  gap: 20px;
+  overflow: auto;
+  padding: 20px;
 
-.ad-section {
+}
+
+.hotplace-section {
   margin-bottom: 50px;
   background-color: #F2F2F2;
 }
 
-.ad-section h2 {
+.hotplace-section h2 {
   margin-left: 20px;
 }
 
-
-.ad-banner {
+.hotplace-item {
   background-color: #A7F25C;
-  width: 85%;
-  height: 250px;
-  margin: 0 auto; /* 마진 0, auto로 가운데 정렬(좌우여백 자동 설정) */
+  width: 100%;
+  width: 200px;
+  height: 200px;
+  margin: 10px auto; /* 마진 0, auto로 가운데 정렬(좌우여백 자동 설정) */
   padding: 10px;
   box-sizing: border-box;
+  border-radius: 10px;
 }
 
 

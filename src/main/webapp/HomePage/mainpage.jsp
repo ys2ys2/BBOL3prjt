@@ -4,6 +4,8 @@
 <%@ page import="java.io.BufferedReader, java.io.InputStreamReader" %>
 <%@ page import="java.io.IOException" %>
 <%@ page import="org.json.JSONArray" %>
+<%@ page import="org.apache.commons.text.StringEscapeUtils" %>
+
 
 <%
     // 공공데이터 API URL 및 매개변수 설정
@@ -50,7 +52,6 @@
     // 데이터를 저장할 리스트 생성
     List<Map<String, String>> itemList = new ArrayList<>();
 
-    String baseUrl = "http://api.kcisa.kr/openapi/"; // 썸네일 기본 URL
     for (int i = 1; i < items.length; i++) {
         String item = items[i];
         
@@ -62,6 +63,9 @@
         String spatialCoverage = item.split("<spatialCoverage>")[1].split("</spatialCoverage>")[0];
         
 
+        // HTML 엔티티를 디코딩
+        description = StringEscapeUtils.unescapeHtml4(description);
+        
         // 데이터를 Map에 저장
         Map<String, String> itemData = new HashMap<>();
         itemData.put("title", title);
@@ -76,13 +80,12 @@
 
     
     // 데이터를 JSON 형식으로 변환하여 JavaScript로 전달
-     String jsonItemList = new org.json.JSONArray(itemList).toString();
+    String jsonItemList = new org.json.JSONArray(itemList).toString();
 
 %>
 
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -100,7 +103,7 @@
     const descriptions = <%= jsonItemList %>;
   </script>
 
-
+ 
 </head>
 
 <body>
@@ -203,7 +206,7 @@
       </div>
 
 
-      <div class="item"></div>
+      <!-- <div class="item"></div>
         <% 
         // 이미 request에 저장된 itemList를 가져와서 반복 출력
         List<Map<String, String>> itemList1 = (List<Map<String, String>>) request.getAttribute("itemList");
@@ -222,42 +225,42 @@
             }
         } 
         %>
-    </div>
+    </div> -->
 
     
   <!-- 인기 여행지 섹션 -->
-  <div class="HotPlace">
+  <div class="famous">
     <h2>인기 여행지</h2>
-    <div class="HotPlace-list">
-      <div class="HotPlace-item">
+    <div class="famous-list">
+      <div class="famous-item">
         <div class="image-placeholder"></div> <!-- 이미지 대신 이미지 박스 -->
         <p>도쿄</p>
       </div>
-      <div class="HotPlace-item">
+      <div class="famous-item">
         <div class="image-placeholder"></div> <!-- 이미지 대신 이미지 박스 -->
         <p>부산</p>
       </div>
-      <div class="HotPlace-item">
+      <div class="famous-item">
         <div class="image-placeholder"></div> <!-- 이미지 대신 이미지 박스 -->
         <p>서울</p>
       </div>
-      <div class="HotPlace-item">
+      <div class="famous-item">
         <div class="image-placeholder"></div> <!-- 이미지 대신 이미지 박스 -->
         <p>오사카</p>
       </div>
-      <div class="HotPlace-item">
+      <div class="famous-item">
         <div class="image-placeholder"></div> <!-- 이미지 대신 이미지 박스 -->
         <p>타이베이</p>
       </div>
-      <div class="HotPlace-item">
+      <div class="famous-item">
         <div class="image-placeholder"></div> <!-- 이미지 대신 이미지 박스 -->
         <p>강원도</p>
       </div>
-      <div class="HotPlace-item">
+      <div class="famous-item">
         <div class="image-placeholder"></div> <!-- 이미지 대신 이미지 박스 -->
         <p>제주도</p>
       </div>
-      <div class="HotPlace-item">
+      <div class="famous-item">
         <div class="image-placeholder"></div> <!-- 이미지 대신 이미지 박스 -->
         <p>태국</p>
       </div>
@@ -291,15 +294,30 @@
       </div>
     </div>
 
-    <!-- 광고 섹션 -->
-    <div class="ad-section">
-      <h2>광고</h2>
-      <div class="ad-banner">
+    <!-- 핫플 섹션 -->
+    <div class="hotplace-section">
+      <h2>함께 떠나는 핫플 여행</h2>
+      <div class="hotplace-list">
+      <div class="hotplace-item">
         <div class="image-placeholder"></div>
-        <p>광고 부분</p>
+        <p>핫플 부분</p>
+      </div>
+      <div class="hotplace-item">
+        <div class="image-placeholder"></div>
+      </div>
+      <div class="hotplace-item">
+        <div class="image-placeholder"></div>
+      </div>
+      <div class="hotplace-item">
+        <div class="image-placeholder"></div>
+      </div>
+      <div class="hotplace-item">
+        <div class="image-placeholder"></div>
       </div>
     </div>
-
+   </div>
+      
+      
   <!-- 이벤트 섹션 -->
   <div class="event-section">
     <h2>이벤트</h2>
