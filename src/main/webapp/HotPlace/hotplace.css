@@ -1,0 +1,337 @@
+@font-face {
+  font-family: 'NanumSquareRoundB';
+  src: url('../fonts/NanumSquareRoundB.ttf') format('truetype'),
+       url('../fonts/NanumSquareRoundOTFB.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NanumSquareRoundEB';
+  src: url('../fonts/NanumSquareRoundEB.ttf') format('truetype'),
+       url('../fonts/NanumSquareRoundOTFEB.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NanumSquareRoundR';
+  src: url('../fonts/NanumSquareRoundR.ttf') format('truetype'),
+       url('../fonts/NanumSquareRoundOTFR.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NanumSquareRoundL';
+  src: url('../fonts/NanumSquareRoundL.ttf') format('truetype'),
+       url('../fonts/NanumSquareRoundOTFL.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NanumSquareRoundOTFR';
+  src: url('../fonts/NanumSquareRoundOTFR.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NanumSquareRoundOTFB';
+  src: url('../fonts/NanumSquareRoundOTFB.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NanumSquareRoundOTFEB';
+  src: url('../fonts/NanumSquareRoundOTFEB.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NanumSquareRoundOTFL';
+  src: url('../fonts/NanumSquareRoundOTFL.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+body {
+  background-color: #F2F2F2;
+  align-items: center;
+  font-family: 'NanumSquareRoundR', sans-serif;
+  width: 100%; /* 전체 화면의 90% 너비 */
+  margin: 0 auto; /* 가로 방향으로 가운데 정렬 */
+  overflow-x: hidden;
+  
+}
+.h_minibody{
+  width: 80%;
+  margin: 0 auto;
+}
+.h_title-container {
+  margin-top: 7%;
+  width: 100%;
+  height: 200px;
+  background-color: #F2F2F2;
+  text-align: center;
+}
+
+.h_title-container h2 {
+  margin-left: 20px;
+  font-size: 35px;
+}
+
+.h_title-container h3 {
+  font-size: 15px;
+  color: #666;
+}
+
+.h_title-container h4 {
+  font-size: 18px;
+  display: inline-block; /* 텍스트 크기에 맞추기 위해 설정 */
+  padding-bottom: 3px; /* 아래쪽에 공간을 주기 위해 패딩 추가 */
+  background-color: rgb(198, 238, 250); /* 배경색 설정 */
+  background-position: 0 100%; /* 배경 위치를 아래쪽으로 설정 */
+  background-repeat: no-repeat; /* 배경 반복을 방지 */
+  background-size: 30% 7px; /* 배경 크기를 글자 너비에 맞추고 높이는 6px로 설정 */
+}
+
+.h_icons {
+  display: flex;
+  margin-top: 10px;
+  width: 100%;
+  height: 30px;
+}
+
+.h_button, .f_button, .s_button {
+  position: absolute; /* 각 버튼을 절대 위치로 설정 */
+  transform: translateY(-50%); /* 가운데 맞추기 위해 50% 이동 */
+  background-color: transparent; /* 버튼 배경 투명 */
+  border: none; /* 버튼 테두리 제거 */
+  cursor: pointer; /* 마우스 커서가 버튼 위에 있을 때 손 모양으로 변경 */
+}
+
+.h_button {
+  left: 20%; /* 왼쪽에서 20% 위치에 배치 */
+}
+
+.f_button {
+  right: 20%; /* 오른쪽에서 30% 위치에 배치 */
+}
+
+.s_button {
+  right: 17%; /* 오른쪽에서 20% 위치에 배치 */
+}
+
+.h_button:hover, .f_button:hover, .s_button:hover {
+  opacity: 0.5; /* 마우스 오버 시 약간 투명하게 */
+}
+
+.h_section-container {
+  width: 100%; /* 부모 컨테이너 너비 */
+  text-align: center; /* 컨텐츠 가운데 정렬 */
+  border-bottom: 1px solid #8E8E8E; /* 하단 구분선 */
+  border-top: 1px solid #8E8E8E; /* 상단 구분선 추가 */
+
+}
+
+.h_navbar {
+  display: flex; /* 플렉스 박스로 정렬 */
+  justify-content: center; /* 항목을 가운데 정렬 */
+  list-style-type: none; /* 기본 리스트 스타일 제거 */
+  padding: 0;
+  margin: 0;
+}
+
+.h_nav-item {
+  padding: 10px 50px; /* 상하, 좌우 패딩 */
+  position: relative; /* 밑줄을 위한 위치 설정 */
+}
+
+.h_nav-item a {
+  text-decoration: none; /* 기본 링크 밑줄 제거 */
+  color: #8E8E8E; /* 기본 텍스트 색상 */
+  font-weight: normal;
+  font-size: 15px;
+}
+
+.h_nav-item.active a {
+  font-weight: bold; /* 활성화된 탭 굵게 표시 */
+  color: #333; /* 활성화된 탭 색상 */
+}
+
+.h_nav-item.active::after {
+  content: ''; /* 가상 요소로 밑줄 추가 */
+  display: block;
+  width: 50%; /* 밑줄 너비 */
+  height: 2px; /* 밑줄 높이 */
+  background-color: black; /* 밑줄 색상 */
+  margin: 5px auto 0 auto; /* 가운데 정렬 */
+}
+
+.h_nav-item:not(:last-child) {
+  border-right: 1px solid #ddd; /* 각 탭 사이 구분선 */
+  
+}
+
+.h_nav-item a:hover {
+  color: #000; /* 마우스 오버 시 텍스트 색상 변경 */
+}
+
+.h_content {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.h_details_title {
+  margin: 10px auto;
+  width: 70%; /* 부모 컨테이너 너비 */
+  border-bottom: 2px solid black; /* 하단 구분선 */
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.h_details {
+  margin: 10px auto;
+  width: 70%; /* 부모 컨테이너 너비 */
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.h_details_more {
+  margin-top: 20px;
+  margin-left: 77%;
+  cursor: pointer; /* 마우스 커서가 버튼 위에 있을 때 손 모양으로 변경 */
+  border: none; /* 버튼 테두리 제거 */
+  width: auto;
+
+}
+
+.h_map {
+  margin: 50px auto;
+  text-align: center;
+  align-items: center;
+  width: 70%;
+
+}
+
+.h_map img{
+  max-width: 699px;
+}
+
+.h_talk {
+  margin: 10px auto;
+  width: 70%;
+
+}
+
+.h_talk h2 {
+  font-size: 25px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.h_talk h2 span {
+  font-size: 18px;
+  color: #007bff;
+  margin-left: 10px;
+}
+
+.comment-form {
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.comment-form textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  resize: none;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.upload-button {
+  border: none;
+  cursor: pointer;
+  background-color: #f9f9f9;
+}
+
+.upload-button img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.login-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.comments-section {
+  margin-top: 20px;
+}
+
+.comment {
+  border-bottom: 1px solid #ddd;
+  padding: 20px 0;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.username {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.date {
+  color: #999;
+}
+
+.comment-actions {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.comment-actions span {
+  margin-right: 20px;
+}
+
+.more-comments {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.more-comments a {
+  text-decoration: none;
+  color: #007bff;
+}

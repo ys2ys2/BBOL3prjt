@@ -87,7 +87,6 @@
 
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -208,7 +207,7 @@
       </div>
 
 
-      <div class="item"></div>
+      <!-- <div class="item"></div>
         <% 
         // 이미 request에 저장된 itemList를 가져와서 반복 출력
         List<Map<String, String>> itemList1 = (List<Map<String, String>>) request.getAttribute("itemList");
@@ -227,42 +226,42 @@
             }
         } 
         %>
-    </div>
+    </div> -->
 
     
   <!-- 인기 여행지 섹션 -->
-  <div class="HotPlace">
+  <div class="famous">
     <h2>인기 여행지</h2>
-    <div class="HotPlace-list">
-      <div class="HotPlace-item">
+    <div class="famous-list">
+      <div class="famous-item">
         <div class="image-placeholder"></div> <!-- 이미지 대신 이미지 박스 -->
         <p>도쿄</p>
       </div>
-      <div class="HotPlace-item">
+      <div class="famous-item">
         <div class="image-placeholder"></div> <!-- 이미지 대신 이미지 박스 -->
         <p>부산</p>
       </div>
-      <div class="HotPlace-item">
+      <div class="famous-item">
         <div class="image-placeholder"></div> <!-- 이미지 대신 이미지 박스 -->
         <p>서울</p>
       </div>
-      <div class="HotPlace-item">
+      <div class="famous-item">
         <div class="image-placeholder"></div> <!-- 이미지 대신 이미지 박스 -->
         <p>오사카</p>
       </div>
-      <div class="HotPlace-item">
+      <div class="famous-item">
         <div class="image-placeholder"></div> <!-- 이미지 대신 이미지 박스 -->
         <p>타이베이</p>
       </div>
-      <div class="HotPlace-item">
+      <div class="famous-item">
         <div class="image-placeholder"></div> <!-- 이미지 대신 이미지 박스 -->
         <p>강원도</p>
       </div>
-      <div class="HotPlace-item">
+      <div class="famous-item">
         <div class="image-placeholder"></div> <!-- 이미지 대신 이미지 박스 -->
         <p>제주도</p>
       </div>
-      <div class="HotPlace-item">
+      <div class="famous-item">
         <div class="image-placeholder"></div> <!-- 이미지 대신 이미지 박스 -->
         <p>태국</p>
       </div>
@@ -296,15 +295,30 @@
       </div>
     </div>
 
-    <!-- 광고 섹션 -->
-    <div class="ad-section">
-      <h2>광고</h2>
-      <div class="ad-banner">
+    <!-- 핫플 섹션 -->
+    <div class="hotplace-section">
+      <h2>함께 떠나는 핫플 여행</h2>
+      <div class="hotplace-list">
+      <div class="hotplace-item">
         <div class="image-placeholder"></div>
-        <p>광고 부분</p>
+        <p>핫플 부분</p>
+      </div>
+      <div class="hotplace-item">
+        <div class="image-placeholder"></div>
+      </div>
+      <div class="hotplace-item">
+        <div class="image-placeholder"></div>
+      </div>
+      <div class="hotplace-item">
+        <div class="image-placeholder"></div>
+      </div>
+      <div class="hotplace-item">
+        <div class="image-placeholder"></div>
       </div>
     </div>
-
+   </div>
+      
+      
   <!-- 이벤트 섹션 -->
   <div class="event-section">
     <h2>이벤트</h2>

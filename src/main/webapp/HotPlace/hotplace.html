@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> <!-- slick css -->
+  <link rel="stylesheet" href="../css/header.css"> <!-- header.css -->
+  <link rel="stylesheet" href="../HotPlace/hotplace.css">
+  
+  <title>함께 떠나는 핫플 여행!</title>
+  
+</head>
+<body>
+
+  <!-- 어두운 배경 -->
+  <div class="overlay"></div>
+
+  <header>
+    <div class="header-container">
+      <div class="logo" data-ko="BBOL BBOL BBOL" data-en="BBOL BBOL BBOL">BBOL BBOL BBOL</div>
+      <nav>
+        <ul>
+          <li><a href="#" data-ko="홈" data-en="Home">홈</a></li>
+          <li><a href="#" data-ko="커뮤니티" data-en="Community">커뮤니티</a></li>
+          <li><a href="#" data-ko="여행지" data-en="RecoHotPlace">여행지</a></li>
+          <li><a href="#" data-ko="여행뽈뽈" data-en="BBOL BBOL BBOL">여행뽈뽈</a></li>
+          <button class="search-btn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <button class="user-btn">
+            <i class="fa-solid fa-user"></i>
+          </button>
+          <button class="earth-btn">
+            <i class="fa-solid fa-earth-americas"></i>
+          </button>
+          <button class="korean" id="lang-btn" data-lang="ko">English</button>
+        </ul>
+      </nav>
+    </div>
+    <!-- 검색 바 -->
+    <div class="search-bar-container">
+      <div class="search-bar-content">
+        <input type="text" placeholder="도시나 키워드를 검색해보세요..." data-ko="도시나 키워드를 검색해보세요..."
+          data-en="Search cities or keywords...">
+        <button class="close-btn"><i class="fa-solid fa-times"></i></button>
+      </div>
+    </div>
+  </header>
+
+<div class="h_minibody">
+<!-- 타이틀 -->
+ <div class="h_title-container">
+  <h2>타이틀 : 수원 화성 [유네스코 세계 유산]</h2>
+  <h3>장소 : 경기 수원시</h3>
+  <h4>소제목 : 실용적인 구조로 되어 있는 동양 성곽의 백미</h4>
+ </div>
+ <div class="h_icons">
+  <button class="h_button">
+    <img src="../images/heart.png" alt="likes">
+  </button>
+  <button class="f_button">
+    <img src="../images/favorite.png" alt="favorite">
+  </button>
+  <button class="s_button">
+    <img src="../images/share.png" alt="share">
+  </button>
+  </div>
+
+  <!-- 네비바 부분 -->
+  <div class="h_section-container">
+    <ul class="h_navbar">
+      <li class="h_nav-item active"><a href="#">사진보기</a></li>
+      <li class="h_nav-item"><a href="#">상세정보</a></li>
+      <li class="h_nav-item"><a href="#">여행톡</a></li>
+      <li class="h_nav-item"><a href="#">추천여행</a></li>
+    </ul>
+  </div>
+
+
+ <!-- 본문 -->
+ <div class="h_content">
+  <img src="../images/firecastle01.jpg" alt="화성01">
+  <img src="../images/firecastle02.jpg" alt="화성02">
+  <img src="../images/firecastle03.jpg" alt="화성03">
+  <img src="../images/firecastle04.jpg" alt="화성04">
+  <img src="../images/firecastle05.jpg" alt="화성05">
+  <img src="../images/firecastle06.jpg" alt="화성06">
+  </div>
+  <div class="h_details_title">
+    <span>상세정보</span>
+  </div>
+  <div class="h_details">
+    조선 태종 때 도호부로 승격된 수원은 한성 4진의 하나였다.<br>
+    한양을 중심으로 동서남북 방향인 광주, 강화, 수원, 개성에 진을 설치하여 수도 한양을 보위케 한 것이다.<br>
+    그 수원 땅을 지키고 있는 화성은 유네스코에 의해 세계문화유산으로 등재되면서 역사적 가치를 높이고 있다.<br>
+    또한 다양한 상설 공연을 진행하고, 매년 가을이면 수원 화성문화제를 개최하여 수원 화성을 알리고 있다.
+  </div>
+  <button class="h_details_more">
+    내용 더보기...
+  </button>
+
+ <div class="h_map">
+  <img src="../images/map.PNG" alt="지도">
+ </div>
+
+ <div class="h_talk">
+  <h2>여행 톡 <span>2</span></h2>
+  <div class="comment-form">
+    <textarea placeholder="로그인 후 소중한 댓글을 남겨주세요."></textarea>
+    <div class="form-actions">
+      <button class="login-button">로그인</button>
+    </div>
+  </div>
+
+  <div class="comments-section">
+    <div class="comment">
+      <div class="user-info">
+        <img src="../images/user-placeholder.png" alt="user">
+        <span class="username">박옥</span>
+        <span class="date">2024.9.24</span>
+      </div>
+      <p>현재와 과거가 함께 있는 느낌이 드는 곳입니다. 역사적으로도 의미가 있는 곳이라서 사진과 정보를 확인하고 가니 더 좋았습니다</p>
+      <div class="comment-actions">
+        <span>👍 0</span>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="user-info">
+        <img src="../images/user-placeholder.png" alt="user">
+        <span class="username">수수</span>
+        <span class="date">2024.9.21</span>
+      </div>
+      <p>밤과 낮 각각의 매력이 있는 곳. 가족과 산책하며 끌끌끌 다니는 재미가 있어요</p>
+      <div class="comment-actions">
+        <span>👍 0</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="more-comments">
+    <a href="#">댓글 더보기 +</a>
+  </div>
+</div>
+ </div>
+
+</div>
+
+<p>페이지 테스트</p>
+
+
+
+
+
+</div>
+
+<script src="../components/header.js"></script>
+<script src="../components/lang-toggle.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+</html>
