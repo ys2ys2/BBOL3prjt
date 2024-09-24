@@ -53,7 +53,6 @@
     // 데이터를 저장할 리스트 생성
     List<Map<String, String>> itemList = new ArrayList<>();
 
-    String baseUrl = "http://api.kcisa.kr/openapi/"; // 썸네일 기본 URL
     for (int i = 1; i < items.length; i++) {
         String item = items[i];
         
